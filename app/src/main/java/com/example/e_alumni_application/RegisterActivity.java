@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterActivity extends AppCompatActivity {
+public class  RegisterActivity extends AppCompatActivity {
 
     Button register;
     EditText name, email, password;
@@ -28,6 +29,9 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase database;
 
+    ProgressBar progressBar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();     //Firebase Connection
+
+        progressBar = findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.GONE);
 
         register = findViewById(R.id.Register_Button);
         name = findViewById(R.id.Name);
@@ -54,6 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 createUser();
+                progressBar.setVisibility(View.VISIBLE);
+
 
             }
         });
@@ -90,10 +99,11 @@ public class RegisterActivity extends AppCompatActivity {
                             UserModel userModel = new UserModel(userName,userEmail,userPassword);
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("User").child(id).setValue(userModel);
-
+                            progressBar.setVisibility(View.GONE);
                             Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                         }
                         else{
+                            progressBar.setVisibility(View.GONE);
                             Toast.makeText(RegisterActivity.this, "Error:"+task.getException(), Toast.LENGTH_SHORT).show();
                         }
                     }

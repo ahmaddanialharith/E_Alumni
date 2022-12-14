@@ -2,6 +2,7 @@ package com.example.e_alumni_application;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 LoginUser();
                 progressBar.setVisibility(View.VISIBLE);
+                startActivity(new Intent(LoginActivity.this, NavigationDrawerActivity.class));
 
             }
         });

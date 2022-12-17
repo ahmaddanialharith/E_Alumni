@@ -15,5 +15,5 @@ public class my_cartFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_my_cart, container, false);
         return root;
     }
-
+//this is java file for cartfragment
 }

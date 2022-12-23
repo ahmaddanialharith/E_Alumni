@@ -54,6 +54,8 @@ public class HomeFragment extends Fragment {
         expCatRec = root.findViewById(R.id.explore_exp);
         recommendedRec = root.findViewById(R.id.recommended_exp);
 
+
+
         //Popular Product Item
         popularRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         popularModelList = new ArrayList<>();

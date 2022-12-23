@@ -57,7 +57,7 @@ public class NavCategoryAdapter extends RecyclerView.Adapter<NavCategoryAdapter.
              imageView = itemView.findViewById(R.id.cat_nav_img);
              name = itemView.findViewById(R.id.nav_cat_name1);
              description = itemView.findViewById(R.id.nav_cat_name2);
-             discount = itemView.findViewById(R.id.nav_cat_name3);
+             discount = itemView.findViewById(R.id.nav_cat_name4);
 
          }
 

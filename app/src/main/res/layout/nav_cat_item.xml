@@ -4,104 +4,85 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="7dp"
     app:cardCornerRadius="5dp"
-    android:elevation="4dp">
+    app:cardElevation="4dp">
 
 
     <LinearLayout
-        android:background="#DFFFD1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFF8A"
         android:orientation="horizontal"/>
 
 
-       <ImageView
-           android:background="@drawable/border"
-           android:id="@+id/cat_nav_img"
-           android:scaleType="centerInside"
-           android:src="@drawable/tie_icon"
-           android:layout_width="150dp"
-           android:layout_height="150dp"/>
+        <ImageView
+            android:id="@+id/cat_nav_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/border"
+            android:scaleType="centerInside"
+            android:src="@drawable/tie_icon" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="160dp"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="271dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="160dp"
+        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/nav_cat_name1"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-
-                />
+        <TextView
+            android:id="@+id/nav_cat_name1"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/alice"
+            android:maxLines="1"
+            android:singleLine="false"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nav_cat_name2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/alice"
+            android:maxLines="2"
+            android:singleLine="false"
             android:text="Description"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-
-            />
+            android:textSize="16sp" />
 
         <TextView
+            android:fontFamily="@font/alice"
             android:id="@+id/nav_cat_name3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Discount"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:text="Discount :"
             android:textColor="@color/black"
-
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nav_cat_name4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:fontFamily="@font/alice"
+            android:text="20% Off"
+            android:textColor="#F8A617"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
 
-            />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-                android:layout_gravity="end"
-                android:layout_marginTop="14dp"
-                android:layout_marginRight="5dp"
-
-                />
-
-
-        
-
-
-
-
-
-
-
-           
-
-
-
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
     </LinearLayout>
 
-    
-    
-    
-    
 </androidx.cardview.widget.CardView>

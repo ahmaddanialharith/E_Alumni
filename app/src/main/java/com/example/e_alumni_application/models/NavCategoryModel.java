@@ -18,6 +18,7 @@ public class NavCategoryModel {
     }
 
     public String getName() {
+
         return name;
     }
 

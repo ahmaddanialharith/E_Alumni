@@ -1,4 +1,4 @@
-package com.example.e_alumni_application.ui.new_products;
+package com.example.e_alumni_application.adapter.ui.offers;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.e_alumni_application.R;
 
-public class new_productsFragment extends Fragment {
+public class offersFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_new_products, container, false);
+        View root = inflater.inflate(R.layout.fragment_offers, container, false);
         return root;
     }
 

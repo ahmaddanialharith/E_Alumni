@@ -3,9 +3,11 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+
 android {
     namespace 'com.example.e_alumni_application'
     compileSdk 32
+
 
     defaultConfig {
         applicationId "com.example.e_alumni_application"

@@ -1,4 +1,4 @@
-package com.example.e_alumni_application.ui.category;
+package com.example.e_alumni_application.adapter.ui.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

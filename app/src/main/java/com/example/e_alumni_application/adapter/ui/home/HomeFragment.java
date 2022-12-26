@@ -1,4 +1,4 @@
-package com.example.e_alumni_application.ui.home;
+package com.example.e_alumni_application.adapter.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

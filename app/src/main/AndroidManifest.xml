@@ -13,7 +13,7 @@
         android:theme="@style/Theme.E_Alumni_Application"
         tools:targetApi="31">
         <activity
-            android:name=".ViewAllActivity"
+            android:name="com.example.e_alumni_application.activites.ViewAllActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

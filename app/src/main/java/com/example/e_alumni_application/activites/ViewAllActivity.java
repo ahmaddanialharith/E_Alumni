@@ -25,7 +25,7 @@ public class ViewAllActivity extends AppCompatActivity {
     FirebaseFirestore firestore;
     RecyclerView recyclerView;
     ViewAllAdapter viewAllAdapter;
-    List<ViewAllModel>viewAllModelList;
+    List<ViewAllModel> viewAllModelList;
     Toolbar toolbar;
 
     @Override
@@ -33,9 +33,9 @@ public class ViewAllActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all);
 
-       toolbar = findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);
-       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         firestore = FirebaseFirestore.getInstance();
@@ -44,7 +44,7 @@ public class ViewAllActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         viewAllModelList = new ArrayList<>();
-        viewAllAdapter = new ViewAllAdapter(this,viewAllModelList);
+        viewAllAdapter = new ViewAllAdapter(this, viewAllModelList);
         recyclerView.setAdapter(viewAllAdapter);
 
         ///////////Getting tie
@@ -64,22 +64,53 @@ public class ViewAllActivity extends AppCompatActivity {
             });
 
         }
-            ///////////Getting Tshirt
-            if (type != null && type.equalsIgnoreCase("tshirt")){
+        ///////////Getting Tshirt
+        if (type != null && type.equalsIgnoreCase("tshirt")) {
 
-                firestore.collection("AllProducts").whereEqualTo("type","tshirt").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+            firestore.collection("AllProducts").whereEqualTo("type", "tshirt").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-                        for (DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                            ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
-                            viewAllModelList.add(viewAllModel);
-                            viewAllAdapter.notifyDataSetChanged();
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
 
-                        }
                     }
-                });
+                }
+            });
         }
+        ///////////Getting Mask
+        if (type != null && type.equalsIgnoreCase("mask")) {
 
+            firestore.collection("AllProducts").whereEqualTo("type", "mask").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+
+                    }
+                }
+            });
+        }
+        ///////////Getting Black Tshirt
+        if (type != null && type.equalsIgnoreCase("tshirt")) {
+
+            firestore.collection("AllProducts").whereEqualTo("type", "tshirtb").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+
+                    }
+                }
+            });
+        }
     }
 }

@@ -8,6 +8,9 @@ public class ViewAllModel {
     String type;
     int price;
 
+    public ViewAllModel() {
+    }
+
     public ViewAllModel(String name, String description, String rating, String img_url, String type, int price) {
         this.name = name;
         this.description = description;

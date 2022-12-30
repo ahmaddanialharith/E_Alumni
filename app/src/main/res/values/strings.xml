@@ -16,6 +16,7 @@
     <string name="menu_my_orders">My Orders</string>
     <string name="menu_my_cart">My Cart</string>
     <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="description">This is a very nice tshirt. Made with cotton fabric</string>
 
 
 </resources>

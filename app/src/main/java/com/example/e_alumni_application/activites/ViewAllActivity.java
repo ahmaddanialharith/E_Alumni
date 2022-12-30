@@ -112,5 +112,38 @@ public class ViewAllActivity extends AppCompatActivity {
                 }
             });
         }
+
+        ///////////Getting mug
+        if (type != null && type.equalsIgnoreCase("mug")) {
+
+            firestore.collection("AllProducts").whereEqualTo("type", "mug").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+
+                    }
+                }
+            });
+        }
+        ///////////Getting jersey
+        if (type != null && type.equalsIgnoreCase("jersey")) {
+
+            firestore.collection("AllProducts").whereEqualTo("type", "jersey").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
+                        ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
+                        viewAllModelList.add(viewAllModel);
+                        viewAllAdapter.notifyDataSetChanged();
+
+                    }
+                }
+            });
+        }
     }
 }

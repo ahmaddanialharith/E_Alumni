@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0680f45e-a323-47a5-a65e-d9f697049f72" name="Changes" comment="">
+    <list default="true" id="738ea9bc-4fcd-47f9-8df4-dbeb8eee6cfa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
@@ -24,11 +22,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/activites/ViewAllActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/activites/ViewAllActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/adapter/ExploreAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/adapter/ExploreAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/activites/DetailedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/activites/DetailedActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/adapter/ViewAllAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/adapter/ViewAllAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/models/ViewAllModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/e_alumni_application/models/ViewAllModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/btn_bg_detailed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_bg_detailed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JaE5G1TaSIFZ6MXunp30rO5CXX" />
+  <component name="ProjectId" id="2K2FK8grcMWT8ueSoC1z4iNtck7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -124,11 +122,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0680f45e-a323-47a5-a65e-d9f697049f72" name="Changes" comment="" />
-      <created>1672307609258</created>
+      <changelist id="738ea9bc-4fcd-47f9-8df4-dbeb8eee6cfa" name="Changes" comment="" />
+      <created>1673164703672</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672307609258</updated>
+      <updated>1673164703672</updated>
     </task>
     <servers />
   </component>

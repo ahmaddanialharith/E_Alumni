@@ -13,14 +13,21 @@
         android:theme="@style/Theme.E_Alumni_Application"
         tools:targetApi="31">
         <activity
-            android:name="com.example.e_alumni_application.activites.DetailedActivity"
+            android:name=".NavCategoryActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.e_alumni_application.activites.ViewAllActivity"
+            android:name=".DetailedActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewAllActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

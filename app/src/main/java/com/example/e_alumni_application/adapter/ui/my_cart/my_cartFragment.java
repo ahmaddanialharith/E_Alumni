@@ -1,11 +1,18 @@
 package com.example.e_alumni_application.adapter.ui.my_cart;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +33,7 @@ public class my_cartFragment extends Fragment {
 
     FirebaseFirestore db;
     FirebaseAuth auth;
+    TextView overTotalAmount;
 
 
     RecyclerView recyclerView;
@@ -41,6 +49,11 @@ public class my_cartFragment extends Fragment {
        recyclerView = root.findViewById(R.id.recyclerview);
        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+
+       overTotalAmount = root.findViewById(R.id.textView4);
+
+       LocalBroadcastManager.getInstance(getActivity())
+               .registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
        cartModelList = new ArrayList<>();
        cartAdapter = new MyCartAdapter(getActivity(),cartModelList);
        recyclerView.setAdapter(cartAdapter);
@@ -64,5 +77,15 @@ public class my_cartFragment extends Fragment {
 
         return root;
     }
+
+    public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            int totalBill = intent.getIntExtra("totalAmount",0);
+            overTotalAmount.setText("Total Bill :"+totalBill+"RM");
+
+        }
+    };
 
 }

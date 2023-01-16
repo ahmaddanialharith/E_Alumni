@@ -25,12 +25,13 @@
                 android:background="#5C001F"
                 android:fontFamily="@font/alice"
                 android:padding="10dp"
-                android:text="Total price :RM300"
+                android:text="Total price :0RM"
                 android:textAlignment="center"
                 android:textColor="#FFFF"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

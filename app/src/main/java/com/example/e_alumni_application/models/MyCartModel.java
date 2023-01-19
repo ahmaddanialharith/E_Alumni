@@ -1,6 +1,8 @@
 package com.example.e_alumni_application.models;
 
-public class MyCartModel {
+import java.io.Serializable;
+
+public class MyCartModel implements Serializable {
 
     String productName;
     String productPrice;
@@ -8,6 +10,7 @@ public class MyCartModel {
     String currentTime;
     String totalQuantity;
     int totalPrice;
+    String documentID;
 
 
     public MyCartModel() {
@@ -20,6 +23,14 @@ public class MyCartModel {
         this.currentTime = currentTime;
         this.totalQuantity = totalQuantity;
         this.totalPrice = totalPrice;
+    }
+
+    public String getDocumentID() {
+        return documentID;
+    }
+
+    public void setDocumentID(String documentID) {
+        this.documentID = documentID;
     }
 
     public String getProductName() {

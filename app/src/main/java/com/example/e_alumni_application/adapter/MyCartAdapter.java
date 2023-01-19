@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -13,6 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.e_alumni_application.R;
 import com.example.e_alumni_application.models.MyCartModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -21,10 +27,14 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
     Context context;
     List<MyCartModel> cartModelList;
     int totalPrice = 0;
+    FirebaseFirestore firestore;
+    FirebaseAuth auth;
 
     public MyCartAdapter(Context context, List<MyCartModel> cartModelList) {
         this.context = context;
         this.cartModelList = cartModelList;
+        firestore = FirebaseFirestore.getInstance();
+        auth = FirebaseAuth.getInstance();
     }
 
     @NonNull
@@ -43,11 +53,35 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
         holder.quantity.setText(cartModelList.get(position).getTotalQuantity());
         holder.totalPrice.setText(String.valueOf(cartModelList.get(position).getTotalPrice()));
 
-        //pass total amount to My Cart Fragment
-        totalPrice = totalPrice + cartModelList.get(position).getTotalPrice();
-        Intent intent = new Intent("MyTotalAmount");
-        intent.putExtra("totalAmount",totalPrice);
-        LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+
+
+        holder.deleteItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid())
+                        .collection("AddToCart")
+                        .document(cartModelList.get(holder.getAdapterPosition()).getDocumentID())
+                        .delete()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+
+                                if (task.isSuccessful()){
+                                    cartModelList.remove(cartModelList.get(holder.getAdapterPosition()));
+                                    notifyDataSetChanged();
+                                    Toast.makeText(context, "Item Deleted", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(context, "Error"+task.getException(), Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+
+            }
+        });
+
+
 
     }
 
@@ -59,6 +93,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
        TextView name,price,date,time,quantity,totalPrice;
+       ImageView deleteItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +104,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
             time = itemView.findViewById(R.id.current_time);
             quantity = itemView.findViewById(R.id.total_quantity);
             totalPrice = itemView.findViewById(R.id.total_price);
+            deleteItem = itemView.findViewById(R.id.delete);
 
         }
     }

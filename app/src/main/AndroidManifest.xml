@@ -13,21 +13,35 @@
         android:theme="@style/Theme.E_Alumni_Application"
         tools:targetApi="31">
         <activity
-            android:name=".NavCategoryActivity"
+            android:name=".ForgotPasswordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailedActivity"
+            android:name=".activites.PlacedOrderActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewAllActivity"
+            android:name=".activites.NavCategoryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activites.DetailedActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activites.ViewAllActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -21,94 +21,75 @@
 
     </ImageView>
 
+
+    <EditText
+        android:id="@+id/Email_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_account_logo"
+        android:drawablePadding="13dp"
+        android:elevation="3dp"
+        android:hint="Email"
+        android:padding="13dp"
+        android:textColor="#888887"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+        app:layout_constraintWidth_percent=".8" />
+
+
     <EditText
         android:id="@+id/profile_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="452dp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="9dp"
-        android:elevation="3dp"
-        android:hint="Your name"
-        android:padding="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/profile_email"
-        app:layout_constraintVertical_bias="0.852" />
-
-    <EditText
-        android:id="@+id/profile_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/edittext_background"
         android:drawableLeft="@drawable/ic_baseline_account_logo"
-        android:drawablePadding="10dp"
+        android:drawablePadding="13dp"
         android:elevation="3dp"
-        android:hint="Your Email"
+        android:hint="Name"
         android:padding="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/profile_phnNumber"
+        android:textColor="#888887"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/profile_phnNumber"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="240dp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_local_offer_24"
-        android:drawablePadding="10dp"
-        android:elevation="3dp"
-        android:hint="Your Phone Number"
-        android:padding="13dp"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/profile_address"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="452dp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_home_24"
-        android:drawablePadding="10dp"
-        android:elevation="3dp"
-        android:hint="Your Address"
-        android:padding="13dp"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_phnNumber"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintTop_toBottomOf="@+id/Email_login"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/profile_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_account_logo"
+        android:drawablePadding="13dp"
+        android:elevation="3dp"
+        android:hint="New Password"
+        android:padding="13dp"
+        android:textColor="#888887"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"
+        app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#5C001F"
         android:id="@+id/update_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Update"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#5C001F"
         android:padding="14dp"
+        android:text="Update"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_phnNumber"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/profile_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

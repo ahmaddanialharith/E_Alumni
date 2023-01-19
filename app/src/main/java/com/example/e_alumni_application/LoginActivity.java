@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Button login;
     EditText email, password;
-    TextView signUp;
+    TextView signUp, forgotpassword;
 
     FirebaseAuth auth;
     ProgressBar progressBar;
@@ -34,13 +34,21 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         auth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressbar);
-        progressBar.setVisibility(View.GONE);
+
 
         login = findViewById(R.id.Login_Button);
         email = findViewById(R.id.Email_login);
         password = findViewById(R.id.Password_Login);
         signUp = findViewById(R.id.sign_up);
+        forgotpassword = findViewById(R.id.forgot_password);
+
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+            }
+        });
+
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 LoginUser();
-                progressBar.setVisibility(View.VISIBLE);
+                //progressBar.setVisibility(View.VISIBLE);
                 startActivity(new Intent(LoginActivity.this, NavigationDrawerActivity.class));
 
             }
@@ -85,11 +93,11 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()){
-                            progressBar.setVisibility(View.GONE);
+                            //progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         }
                         else {
-                            progressBar.setVisibility(View.GONE);
+                            //progressBar.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Error"+task.isSuccessful(), Toast.LENGTH_SHORT).show();
                         }
 

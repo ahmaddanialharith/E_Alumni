@@ -50,11 +50,6 @@ public class HomeFragment extends Fragment {
     private ViewAllAdapter viewAllAdapter;
 
 
-
-
-
-
-
     //Explore Product Category
     List<EcploreCategory> categoryList;
     ExploreAdapter exploreAdapter;

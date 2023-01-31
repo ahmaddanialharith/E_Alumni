@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         auth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressbar);
+     /*   progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.GONE);
         if (auth.getCurrentUser() !=null) {
             progressBar.setVisibility(View.VISIBLE);
             Toast.makeText(this, "please wait you are already logged in", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
         LoginSplash = findViewById(R.id.splash_login);
         RegisterSplash = findViewById(R.id.splash_register);

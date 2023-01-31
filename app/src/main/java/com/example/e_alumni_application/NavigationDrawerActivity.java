@@ -70,7 +70,6 @@ public class NavigationDrawerActivity extends AppCompatActivity {
         CircleImageView headerImg = headerView.findViewById(R.id.nav_header_img);
 
 
-
     }
 
     @Override

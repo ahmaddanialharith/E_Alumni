@@ -8,7 +8,7 @@
     android:background="@color/white">
 
     <EditText
-        android:textColor="#888887"
+        android:textColor="#707023"
         android:id="@+id/Name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

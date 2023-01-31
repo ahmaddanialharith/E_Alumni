@@ -16,6 +16,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.example.e_alumni_application.ForgotPasswordActivity;
+import com.example.e_alumni_application.LoginActivity;
+import com.example.e_alumni_application.NavigationDrawerActivity;
 import com.example.e_alumni_application.R;
 import com.example.e_alumni_application.models.UserModel;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -33,14 +36,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ProfileFragment extends Fragment {
 
     CircleImageView profileImg;
-    EditText name, email, password;
+    EditText name, email;
     Button update;
 
     FirebaseStorage storage;
     FirebaseAuth auth;
     FirebaseDatabase database;
-
-
 
 
 
@@ -56,7 +57,6 @@ public class ProfileFragment extends Fragment {
         profileImg = root.findViewById(R.id.profile_picture);
         name = root.findViewById(R.id.profile_name);
         email = root.findViewById(R.id.Email_login);
-        password = root.findViewById(R.id.profile_password);
         update = root.findViewById(R.id.update_button);
 
         database.getReference().child("User").child(FirebaseAuth.getInstance().getUid())
@@ -88,6 +88,8 @@ public class ProfileFragment extends Fragment {
 
             }
         });
+
+
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
